@@ -3,3 +3,4 @@ description:  A place for my daily brain food.
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-cayman
+permalink: /blog/:title/
