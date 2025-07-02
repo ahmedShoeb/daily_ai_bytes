@@ -14,27 +14,16 @@ There should be whitespace between paragraphs. We recommend including a README, 
 
 Hi Ahmed
 
-<h2>Latest Blog Posts</h2>
-    <ul class="post-list">
-      {% for post in site.posts limit: 5 %} {# Loop through the 5 most recent posts #}
-        <li>
-          <h3>
-            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-          </h3>
-          <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
-          <div class="post-excerpt">
-            {{ post.excerpt | strip_html | truncatewords: 30 }} {# Display a short excerpt #}
-            <a href="{{ post.url | relative_url }}">Read more &raquo;</a>
-          </div>
-        </li>
-      {% endfor %}
-    </ul>
+## Header 2 Latest Blog Posts
+{% for post in site.posts limit: 5 %} {# Loop through the 5 most recent posts #}
 
-    {% if site.posts.size > site.paginate %} {# Show a link to more posts if pagination is enabled and there are more posts #}
-      <p class="view-all-posts">
-        <a href="/page2/">View all posts &raquo;</a> {# Adjust this link if you change paginate_path in _config.yml #}
-      </p>
-    {% endif %}
+[{{ post.title }}]({{ post.url | relative_url }})
+<small>{{ post.date | date: "%B %d, %Y" }}</small>
+
+{{ post.excerpt | strip_html | truncatewords: 50 }}
+[Read more »]({{ post.url | relative_url }})
+
+{% endfor %}
 
 ## Header 2
 
