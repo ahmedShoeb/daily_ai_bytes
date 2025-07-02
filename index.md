@@ -14,6 +14,28 @@ There should be whitespace between paragraphs. We recommend including a README, 
 
 Hi Ahmed
 
+<h2>Latest Blog Posts</h2>
+    <ul class="post-list">
+      {% for post in site.posts limit: 5 %} {# Loop through the 5 most recent posts #}
+        <li>
+          <h3>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h3>
+          <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
+          <div class="post-excerpt">
+            {{ post.excerpt | strip_html | truncatewords: 30 }} {# Display a short excerpt #}
+            <a href="{{ post.url | relative_url }}">Read more &raquo;</a>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+
+    {% if site.posts.size > site.paginate %} {# Show a link to more posts if pagination is enabled and there are more posts #}
+      <p class="view-all-posts">
+        <a href="/page2/">View all posts &raquo;</a> {# Adjust this link if you change paginate_path in _config.yml #}
+      </p>
+    {% endif %}
+
 ## Header 2
 
 > This is a blockquote following a header.
@@ -25,9 +47,9 @@ Hi Ahmed
 ```js
 // Javascript code with syntax highlighting.
 var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
+  dateformat.i18n = require("./lang/" + l);
   return true;
-}
+};
 ```
 
 ```ruby
@@ -39,9 +61,9 @@ end
 
 #### Header 4
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+- This is an unordered list following a header.
+- This is an unordered list following a header.
+- This is an unordered list following a header.
 
 ##### Header 5
 
@@ -52,7 +74,7 @@ end
 ###### Header 6
 
 | head1        | head two          | three |
-|:-------------|:------------------|:------|
+| :----------- | :---------------- | :---- |
 | ok           | good swedish fish | nice  |
 | out of stock | good and plenty   | nice  |
 | ok           | good `oreos`      | hmm   |
@@ -60,14 +82,14 @@ end
 
 ### There's a horizontal rule below this.
 
-* * *
+---
 
 ### Here is an unordered list:
 
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
+- Item foo
+- Item bar
+- Item baz
+- Item zip
 
 ### And an ordered list:
 
@@ -99,7 +121,6 @@ end
 ### Large image
 
 ![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
 
 ### Definition lists can be used with HTML syntax.
 
