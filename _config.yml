@@ -1,6 +1,5 @@
 title: Daily Mail for Tech news
 description:  A place for my daily brain food.
 show_downloads: false
-google_analytics:
 theme: jekyll-theme-cayman
 permalink: /blog/:title/
