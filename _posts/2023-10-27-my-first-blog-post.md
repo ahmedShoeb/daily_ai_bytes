@@ -1,7 +1,6 @@
 ---
 layout: default # This tells Jekyll to use the 'post' layout provided by the Cayman theme
 title: My First Blog Post with Cayman
-date: 2023-10-27 10:00:00 +1000 # Use your local timezone offset
 categories: [Jekyll, Cayman, Blog] # Optional: For categorization
 excerpt: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
 ---
