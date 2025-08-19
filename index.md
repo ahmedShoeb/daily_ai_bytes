@@ -10,7 +10,6 @@ layout: default
 ### [{{ post.title }}]({{ post.url | relative_url }})
 <small>{{ post.date | date: "%B %d, %Y" }}</small>
 
-> {{ post.excerpt | strip_html | truncatewords: 50 }}
 >
 [Read more »]({{ post.url | relative_url }})
 
