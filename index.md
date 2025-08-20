@@ -5,7 +5,7 @@ layout: default
 # Hi Ahmed
 
 ## Latest Blog Posts
-{% assign sorted_posts = site.posts | sort: "name" | reverse %}
+{% assign sorted_posts = site.posts | sort: "name" %}
 {% for post in sorted_posts limit: 15 %} 
 
 ### [{{ post.title }}]({{ post.url | relative_url }})
