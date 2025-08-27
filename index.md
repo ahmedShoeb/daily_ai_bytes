@@ -10,7 +10,7 @@ layout: default
 {% assign page_num = page.page_num | default: 1 %}
 {% assign start = posts_per_page | times: page_num | minus: posts_per_page %}
 {% assign end = posts_per_page | times: page_num %}
-{% for post in sorted_posts %}
+{% for post in paginator.posts %}
   {% if forloop.index0 >= start and forloop.index0 < end %}
 ### [{{ post.title }}]({{ post.url | relative_url }})
 <small>{{ post.date | date: "%B %d, %Y" }}</small>
