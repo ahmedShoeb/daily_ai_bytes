@@ -6,7 +6,7 @@ layout: default
 
 ## Latest Blog Posts
 {% assign sorted_posts = site.posts | sort: "name"  %}
-{% for post in sorted_posts limit: 15 %} 
+{% for post in sorted_posts limit: 20 %} 
 
 ### [{{ post.title }}]({{ post.url | relative_url }})
 <small>{{ post.date | date: "%B %d, %Y" }}</small>
