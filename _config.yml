@@ -5,13 +5,10 @@ theme: jekyll-theme-cayman
 plugins:
   - jekyll-paginate
 
+baseurl: "/daily_ai_bytes"
 paginate: 5
 paginate_path: "/page:num/"
 
 # Optional settings
 future: true  # To show posts dated in the future
 # exclude: [".sass-cache/", "node_modules/", "Gemfile", "Gemfile.lock"]
-# plugins:
-#   - jekyll-paginate
-# paginate: 5
-# paginate_path: "/page:num/"  # URL structure for pagination
