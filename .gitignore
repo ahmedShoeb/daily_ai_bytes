@@ -5,3 +5,10 @@ Gemfile.lock
 .jekyll-cache
 .jekyll-cache
 .DS_Store
+
+# VS Code files
+.vscode/
+**/settings.json
+**/launch.json
+**/tasks.json
+.history/
