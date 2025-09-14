@@ -12,3 +12,7 @@ Gemfile.lock
 **/launch.json
 **/tasks.json
 .history/
+
+# gem
+vendor/bundle
+.bundle
